@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - StpOCSDK-JJC (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - StpOCSDK-JJC (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  StpOCSDK-JJC:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  StpOCSDK-JJC: ffab4c9798c9cceb2d84dc6d64da8b965a5005f2
+
+PODFILE CHECKSUM: b71fdbbca576dfc90302883afcead5877aba2ad6
+
+COCOAPODS: 1.10.0

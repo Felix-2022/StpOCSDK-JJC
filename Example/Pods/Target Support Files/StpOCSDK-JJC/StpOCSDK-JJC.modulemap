@@ -1,0 +1,6 @@
+framework module StpOCSDK_JJC {
+  umbrella header "StpOCSDK-JJC-umbrella.h"
+
+  export *
+  module * { export * }
+}

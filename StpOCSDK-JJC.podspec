@@ -17,26 +17,34 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
+# This description is used to generate tags and improve search results.
+#   * Think: What does it do? Why did you write it? What is the focus?
+#   * Try to keep it short, snappy and to the point.
+#   * Write the description between the DESC delimiters below.
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Guxiaodong941005/StpOCSDK-JJC'
+  s.homepage         = 'https://github.com/Felix-2022/StpOCSDK-JJC'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Guxiaodong941005' => '970768639@qq.com' }
-  s.source           = { :git => 'https://github.com/Guxiaodong941005/StpOCSDK-JJC.git', :tag => s.version.to_s }
+  s.author           = { 'Felix' => '252141465@qq.com' }
+  s.source           = { :git => 'https://github.com/Felix-2022/StpOCSDK-JJC.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-
-  s.source_files = 'StpOCSDK-JJC/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'StpOCSDK-JJC' => ['StpOCSDK-JJC/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.requires_arc = true
+  s.libraries = 'c++'
+  s.frameworks = 'UIKit','WebKit','CoreTelephony','SystemConfiguration','MobileCoreServices','AVFoundation'
+  s.dependency 'AFNetworking/Serialization','~> 4.0.1'
+  s.dependency 'AFNetworking/Security','~> 4.0.1'
+  s.dependency 'AFNetworking/NSURLSession','~> 4.0.1'
+  s.dependency 'YYModel'
+ #依赖自己的或别人的Framework文件
+  s.vendored_frameworks = 'SpeakPen.framework'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC'}
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
