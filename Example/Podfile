@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'StpOCSDK-JJC_Example' do
+  pod 'StpOCSDK-JJC', :path => '../'
+
+  target 'StpOCSDK-JJC_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
