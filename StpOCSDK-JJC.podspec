@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StpOCSDK-JJC'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of StpOCSDK-JJC.'
 
 # This description is used to generate tags and improve search results.
@@ -38,9 +38,7 @@ TODO: Add long description of the pod here.
   s.requires_arc = true
   s.libraries = 'c++'
   s.frameworks = 'UIKit','WebKit','CoreTelephony','SystemConfiguration','MobileCoreServices','AVFoundation'
-  s.dependency 'AFNetworking/Serialization','~> 4.0.1'
-  s.dependency 'AFNetworking/Security','~> 4.0.1'
-  s.dependency 'AFNetworking/NSURLSession','~> 4.0.1'
+  s.dependency 'AFNetworking','4.0.1'
   s.dependency 'YYModel'
  #依赖自己的或别人的Framework文件
   s.vendored_frameworks = 'SpeakPen.framework'
